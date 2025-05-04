@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res, next) => {
     // find the correct contact collection in the database
-    const result = await mongodb.getDB().collection('Contacts').find();
+    const result = await mongodb.getDB('CSE341').collection('Contacts').find();
     // make collection in database into an array
     result.toArray().then((lists) => {
         // sets the data as JSON format
@@ -15,7 +15,7 @@ const getAll = async (req, res, next) => {
 
 const getQueried = async (req, res, next) => {
     const userId = new ObjectId(req.params.id);
-    const result = await mongodb.getDB().collection('Contacts').find({_id: userId});
+    const result = await mongodb.getDB('CSE341').collection('Contacts').find({_id: userId});
     result.toArray().then((lists) => {
         // sets the data as JSON format
         res.setHeader('Content-Type', 'application/json');
