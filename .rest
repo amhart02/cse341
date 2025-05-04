@@ -2,4 +2,3 @@ GET http://localhost:8000/contacts
 
 GET http://localhost:8000/contacts/6816b936bd102b29679bc09d
 
-
