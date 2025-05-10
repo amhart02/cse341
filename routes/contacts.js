@@ -7,6 +7,15 @@ const contactsController = require('../controllers/contacts');
 router.get('/', contactsController.getAll);
 
 // to get queried results from the database
-router.get('/:id', contactsController.getQueried);
+router.get('/:id', contactsController.getSingle);
+
+// create a contact
+router.post('/', contactsController.createContact)
+
+//update a contact
+router.put('/:id', contactsController.updateContact)
+
+//delete a contact
+router.delete('/:id', contactsController.deleteContact)
 
 module.exports = router;
