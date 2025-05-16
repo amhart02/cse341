@@ -3,6 +3,7 @@ var app = express();
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const port = process.env.PORT || 8000;
+app.use(express.static('.')); 
 
 app
   .use(bodyParser.json())
