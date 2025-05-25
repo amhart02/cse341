@@ -1,10 +1,11 @@
-// initializing the database
+// import variables
 const dotenv = require('dotenv');
 dotenv.config();
 const MongoClient = require('mongodb').MongoClient;
 
 let _db;
 
+//initialize the database
 const initDB = (callback) => {
     // if database is already initalized
     if (_db) {
